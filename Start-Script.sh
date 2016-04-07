@@ -11,7 +11,6 @@ apt-get install git
 sudo curl -fsSL https://get.docker.com/ | sh
 
 #Cloning the repository
-sudo rm GC-Infra
 git clone https://github.com/Trazarw/GC-Infra
 
 #Deploy the docker containers
