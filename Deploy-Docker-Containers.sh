@@ -11,7 +11,7 @@ get_script_dir () {
      echo "$DIR"
 }
 
-	path = get_script_dir
+	path = $(get_script_dir)
 	sudo rm "dcktmpfolder" -r
 	sudo mkdir "dcktmpfolder"
 	cd "dcktmpfolder"	
