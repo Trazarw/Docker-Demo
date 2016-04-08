@@ -11,11 +11,11 @@ get_script_dir () {
      echo "$DIR"
 }
 
-
+	path = get_script_dir()
 	sudo rm "dcktmpfolder" -r
 	sudo mkdir "dcktmpfolder"
 	cd "dcktmpfolder"	
-	cd cdir "$(get_script_dir)/DockerFiles/Server/"
+	cd cdir "$path/DockerFiles/Server/"
 	sudo docker build -t 'my-python-app' .
 	sudo docker run -it --rm --name 'my-running-app' 'my-python-app'
 #Create the folder to contain the Docker build and move the terminal to the to it
