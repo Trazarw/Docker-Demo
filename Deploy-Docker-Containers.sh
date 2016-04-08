@@ -3,13 +3,13 @@ sudo mkdir "dcktmpfolder"
 cd "dcktmpfolder"
 
 #Create the server docker build and run it
-cd ".\Docker Files\Server"
-docker build -it --rm  "docker-server-build-image" .
+cd ".\DockerFiles\Server"
+docker build -t "docker-server-build-image" .
 sudo docker run "docker-server-build-image" --net bridge
 cd "cd .."
 
 #Create the client docker build and run it
-cd ".\Docker Files\Client"
-docker build -it --rm "docker-client-build-image" .
+cd ".\DockerFiles\Client"
+docker build -t "docker-client-build-image" .
 sudo docker run "docker-client-build-image" --net bridge
 cd "cd .."
