@@ -3,10 +3,10 @@ sudo mkdir "dcktmpfolder"
 cd "dcktmpfolder"
 
 #Create the server docker build and run it
-cd "/DockerFiles/Server/"
+cd DockerFiles/Server/
 sudo docker build -t my-python-app .
 sudo docker run -it --rm --name my-running-app my-python-app
-cd "cd .."
+cd ..
 
 #Create the client docker build and run it
 #cd ".\DockerFiles\Client"
