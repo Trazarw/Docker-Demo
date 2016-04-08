@@ -10,6 +10,8 @@ apt-get install git
 #Install docker
 sudo curl -fsSL https://get.docker.com/ | sh
 sudo docker daemon
+sudo rm /var/run/docker.pid -f
+sudo docker daemon
 
 #Cloning the repository
 git clone https://github.com/Trazarw/GC-Infra
