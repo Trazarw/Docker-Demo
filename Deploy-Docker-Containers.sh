@@ -11,14 +11,13 @@ get_script_dir () {
      echo "$DIR"
 }
 
-deploy_containers() {
+
 	sudo rm "dcktmpfolder" -r
 	sudo mkdir "dcktmpfolder"
 	cd "dcktmpfolder"	
 	cd cdir "$(get_script_dir)/DockerFiles/Server/"
 	sudo docker build -t 'my-python-app' .
 	sudo docker run -it --rm --name 'my-running-app' 'my-python-app'
-}
 #Create the folder to contain the Docker build and move the terminal to the to it
 
 
