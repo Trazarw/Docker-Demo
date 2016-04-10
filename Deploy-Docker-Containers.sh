@@ -1,9 +1,9 @@
-sudo rm "dcktmpfolder"
-sudo mkdir "dcktmpfolder"
-cd "$1/Apps/Node/"
+#sudo rm "dcktmpfolder"
+#sudo mkdir "dcktmpfolder"
+#cd "$1/Apps/Node/"
 
-sudo docker build -t 'python-app' .
-sudo docker run -P -it --rm --name 'running-01' 'python-app'
+#sudo docker build -t 'python-app' .
+#sudo docker run -P -it --rm --name 'running-01' 'python-app'
  
 sudo rm "dcktmpfolder" -r
 sudo mkdir "dcktmpfolder"
