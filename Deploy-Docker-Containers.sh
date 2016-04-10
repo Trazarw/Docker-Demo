@@ -4,7 +4,7 @@ cd "dcktmpfolder"
 cd "$1/DockerFiles/Client/"
 
 sudo docker build -t 'my-python-app' .
-sudo docker run -P 81:5000 -it --rm --name 'my-running-app-01' 'my-python-app' 
+sudo docker run -P -it --rm --name 'my-running-app-01' 'my-python-app' --expose 5000
  
 sudo rm "dcktmpfolder" -r
 sudo mkdir "dcktmpfolder"

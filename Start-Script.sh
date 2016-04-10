@@ -30,7 +30,7 @@ sudo service docker start
 
 #Cloning the repository
 sudo rm GC-Infra -r
-git clone https://github.com/Trazarw/GC-Infra
+sudo git clone https://github.com/Trazarw/GC-Infra
 
 #Get executing script source
 SOURCE="${BASH_SOURCE[0]}"
@@ -43,6 +43,6 @@ scriptPath="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 #Deploy the docker containers
 cd "$scriptPath/GC-Infra/"
-sudo chmod 555 Deploy-Docker-Containers.sh
-sudo $scriptPath/Deploy-Docker-Containers.sh $scriptPath
+sudo chmod 555 ./Deploy-Docker-Containers.sh
+sudo ./Deploy-Docker-Containers.sh $scriptPath/GC-Infra
 	
