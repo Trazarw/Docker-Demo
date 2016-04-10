@@ -43,5 +43,6 @@ scriptPath="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 #Deploy the docker containers
 cd "$scriptPath/GC-Infra/"
-sudo chmod 555 "Deploy-Docker-Containers.sh"
-$scriptPath/Deploy-Docker-Containers.sh
+sudo chmod 555 $scriptPath\Deploy-Docker-Containers.sh
+$scriptPath/Deploy-Docker-Containers.sh $scriptPath
+	
