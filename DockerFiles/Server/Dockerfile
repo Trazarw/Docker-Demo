@@ -1,3 +1,1 @@
-FROM ubuntu:14.04
-MAINTAINER Trazarw <enis.nefzi.sanchez@gmil.com>
-RUN apt-get update 
+FROM node:4-onbuild
