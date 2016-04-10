@@ -1,14 +1,14 @@
 sudo rm "dcktmpfolder" -r
 sudo mkdir "dcktmpfolder"
 cd "dcktmpfolder"	
-cd "$1/DockerFiles/Client/"
+cd "$1/Apps/Node/"
 
-sudo docker build -t 'my-python-app' .
-sudo docker run -P -it --rm --name 'my-running-app-01' 'my-python-app'
+sudo docker build -t 'python-app' .
+sudo docker run -P -it --rm --name 'python-app-container'
  
 sudo rm "dcktmpfolder" -r
 sudo mkdir "dcktmpfolder"
 cd "dcktmpfolder"	
-cd "$1/DockerFiles/Server/"
-sudo docker build -t 'my-node-app' .
-sudo docker run -P 80:5001 -it --rm --name 'my-running-app-02' 'my-node-app'
+cd "$1/Apps/Phyton/"
+sudo docker build -t 'node-app' .
+sudo docker run -it --rm --name 'node-app-container'
