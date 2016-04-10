@@ -1,2 +1,2 @@
 FROM python:3-onbuild
-CMD [ "phyton", "./Apps/app.py" ]
+CMD ["/usr/bin/python", "app.py"
