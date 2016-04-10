@@ -1,4 +1,4 @@
-from urllib2 import Request, urlopen, URLError
+from urllib2 import Request, urlopen
 
 request = Request('127.0.0.1:3000')
 response = urlopen(request)
