@@ -5,6 +5,7 @@ apt-get -y install curl
 apt-get purge lxc-docker*
 apt-get purge docker.io*
 apt-get -y install apt-transport-https ca-certificates
+apt-get -y install git
 
 apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 
@@ -25,7 +26,11 @@ while [ -h "$SOURCE" ]; do
 done
 scriptPath="$( cd -P "$( dirname "$SOURCE" )" && pwd )" 
 
+git clone https://github.com/Trazarw/GC-Infra
+
+cd $scriptPath/GC-Infra
+
 chmod 555 ./Deploy-Docker-Containers.sh
-./Deploy-Docker-Containers.sh $scriptPath
+./Deploy-Docker-Containers.sh $scriptPath/GC-Infra
 
 echo "I AM HERE MY FRIEND"
