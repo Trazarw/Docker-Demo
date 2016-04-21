@@ -1,9 +1,9 @@
-rm "dcktmpfolder"
-mkdir "dcktmpfolder"
+sudo rm "dcktmpfolder"
+sudo mkdir "dcktmpfolder"
 cd "$1/Apps/Node/"
 
-docker build -t 'node-app' .
-docker run -P --detach=false --name 'running-01' 'node-app'
-	 
-docker build -t 'node-app' .
-docker run -P --detach=false --name 'running-02' 'node-app'
+sudo docker build -t 'node-app' .
+sudo docker run -P -d -it --rm --name 'running-01' 'node-app'
+
+sudo docker build -t 'node-app' .
+sudo docker run -P -d -it --rm --name 'running-02' 'node-app' 
