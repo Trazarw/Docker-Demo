@@ -27,3 +27,5 @@ scriptPath="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 chmod 555 ./Deploy-Docker-Containers.sh
 ./Deploy-Docker-Containers.sh $scriptPath
+
+echo "I AM HERE MY FRIEND"
