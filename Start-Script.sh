@@ -13,9 +13,9 @@ apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E8
 rm /etc/apt/sources.list.d/docker.list
 echo 'deb https://apt.dockerproject.org/repo ubuntu-trusty main' > /etc/apt/sources.list.d/docker.list
 
-apt-cache policy docker-engine
+apt-cache policy docker.io
 
-apt-get -y install docker-engine
+apt-get -y install docker.io
 
 sudo apt-get -y install linux-image-extra-$(uname -r)
 
