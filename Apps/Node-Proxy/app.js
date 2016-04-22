@@ -1,20 +1,23 @@
 var http = require('http');
+var result = 'result';
 
 http.createServer(function (req, res) {
 
 	var req = http.request({
-	    host: '192.168.5.8',
-	    port: 3128,
+	    host: '0.0.0.0',
+	    port: 8081,
 	    method: 'GET',
 	    path: '/'
 	}, function (res) {
 	    res.on('data', function (data) {
-	        console.log(data.toString());
+	    	result = data.toString();
 	    });
 	});
-  req.end();
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Ve Bilbao Rocks\n');
+
+  	req.end();
+  	res.writeHead(200, {'Content-Type': 'text/plain'});
+  	res.end(result);
+
 }).listen(4000, '0.0.0.0');
 
 console.log('Server running at http://0.0.0.0:4000/');
