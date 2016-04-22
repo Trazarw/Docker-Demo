@@ -1,8 +1,10 @@
 var http = require('http');
+var request = require('sync-request');
 
 http.createServer(function (req, res) {
+  var res = request('GET', 'http://example.com');
   res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World\n');
+  res.end('Proxied Message:\n' + res.getBody());
 }).listen(3000, '0.0.0.0');
 
-console.log('Server running at http://0.0.0.0:3000/');
+console.log('Server running at http://proxy:3000/');

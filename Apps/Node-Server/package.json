@@ -1,0 +1,6 @@
+{
+	"name": "sync-request",
+	"scripts": {
+    	"start": "node app.js"
+	}
+}
