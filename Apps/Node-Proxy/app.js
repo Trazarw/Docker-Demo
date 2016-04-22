@@ -7,4 +7,4 @@ http.createServer(function (req, res) {
   res.end('Proxied Message:\n' + res.getBody());
 }).listen(3000, '0.0.0.0');
 
-console.log('Server running at http://proxy:3000/');
+	

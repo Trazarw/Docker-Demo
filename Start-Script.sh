@@ -3,8 +3,8 @@
 sudo su
 apt-get update
 apt-get -y install curl
-apt-get purge lxc-docker*
-apt-get purge docker.io*
+apt-get -y purge lxc-docker*
+apt-get -y purge docker.io*
 apt-get -y install apt-transport-https ca-certificates
 apt-get -y install git
 
@@ -29,7 +29,7 @@ while [ -h "$SOURCE" ]; do
 	SOURCE="$( readlink "$SOURCE" )"
 	[[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
 done
-scriptPath="$( cd -P "$( dirname "$SOURCE" )" && pwd )" 
+scriptPath="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 git clone https://github.com/Trazarw/GC-Infra
 
