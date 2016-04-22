@@ -1,13 +1,12 @@
 var http = require('http');
-var result = 'result';
+var result;
 
 http.createServer(function (req, res) {
 
 	var req = http.request({
 	    host: '0.0.0.0',
 	    port: 8081,
-	    method: 'GET',
-	    path: '/'
+	    method: 'GET'
 	}, function (res) {
 	    res.on('data', function (data) {
 	    	result = data.toString();
