@@ -1,4 +1,5 @@
 #!/bin/bash
+
 sudo su
 apt-get update
 apt-get -y install curl
@@ -36,5 +37,3 @@ cd $scriptPath/GC-Infra
 
 chmod 555 ./Deploy-Docker-Containers.sh
 ./Deploy-Docker-Containers.sh $scriptPath/GC-Infra
-
-echo "I AM HERE MY FRIEND"
