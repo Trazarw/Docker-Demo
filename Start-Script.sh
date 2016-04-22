@@ -3,8 +3,6 @@
 sudo su
 apt-get update
 apt-get -y install curl
-apt-get -y purge lxc-docker*
-apt-get -y purge docker.io*
 apt-get -y install apt-transport-https ca-certificates
 apt-get -y install git
 
