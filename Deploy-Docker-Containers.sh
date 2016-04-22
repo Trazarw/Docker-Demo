@@ -1,10 +1,7 @@
-sudo rm "dcktmpfolder"
-sudo mkdir "dcktmpfolder"
-cd "$1/Apps/Node/"
+cd "$1/Apps/Node-Proxy"
+sudo docker build -t 'Docker-Build' .
+sudo docker run --expose 3000 -p 8080:3000 -d -it --name 'Node-Proxy' 'Docker-Build'
 
-sudo docker build -t 'node-app' .
-
-sudo docker run --expose 3000 -p 8080:3000 -d -it --name 'Node-Server' 'node-app'
-#sudo docker run --expose 4000 -p 127.0.0.1:80:4000 -d -it --name 'Node-Client' 'node-app' --link 'Node-Server'
-
-	
+cd "$1/Apps/Node-Server"
+sudo docker build -t 'Docker-Build' .
+sudo docker run -d -it --name 'Node-Server' 'Docker-Build' --link 'Node-Proxy'
