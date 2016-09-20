@@ -1,3 +1,3 @@
 # Docker-Demo
 
-This repository host files used for a small demo about Docker containers in a Ubuntu machine.
+This repository contains code used for a demo about deploying nodejs applications using docker containers in a linux machine.
