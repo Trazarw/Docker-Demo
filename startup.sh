@@ -9,12 +9,12 @@ done
 scriptPath="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 
-cd scriptPath/Host
+cd $scriptPath/Host
 
-chmod 555 scriptPath/Host/install-docker-engenie.sh
-chmod 555 scriptPath/Host//build-docker-containers.sh
-chmod 555 scriptPath/Host//deploy-docker-containers.sh
+chmod 555 $scriptPath/Host/install-docker-engenie.sh
+chmod 555 $scriptPath/Host//build-docker-containers.sh
+chmod 555 $scriptPath/Host//deploy-docker-containers.sh
 
 scriptPath/Host//install-docker-engenie.sh
-scriptPath/Host/build-docker-containers scriptPath/../Apps
+scriptPath/Host/build-docker-containers $scriptPath/../Apps
 scriptPath/Host//deploy-docker-containers
