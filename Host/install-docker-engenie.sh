@@ -1,5 +1,3 @@
-#!/bin/bash
-
 sudo su
 apt-get update
 apt-get -y install curl
@@ -20,18 +18,3 @@ sudo apt-get -y install linux-image-extra-$(uname -r)
 apt-get -y install apparmor
 
 service docker start
-
-SOURCE="${BASH_SOURCE[0]}"
-while [ -h "$SOURCE" ]; do
-	DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
-	SOURCE="$( readlink "$SOURCE" )"
-	[[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
-done
-scriptPath="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
-
-git clone https://github.com/Trazarw/GC-Infra
-
-cd $scriptPath/GC-Infra
-
-chmod 555 ./Deploy-Docker-Containers.sh
-./Deploy-Docker-Containers.sh $scriptPath/GC-Infra
