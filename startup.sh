@@ -11,9 +11,9 @@ scriptPath="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 cd scriptPath/Host
 
-chmod 555 ./install-docker-engenie
-chmod 555 ./build-docker-containers
-chmod 555 ./deploy-docker-containers
+chmod 555 ./install-docker-engenie.sh
+chmod 555 ./build-docker-containers.sh
+chmod 555 ./deploy-docker-containers.sh
 
 ./install-docker-engenie.sh
 ./build-docker-containers scriptPath/../Apps
